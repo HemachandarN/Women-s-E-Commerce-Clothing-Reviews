@@ -3,13 +3,13 @@ Analyzing Customer reviews using Text Mining to classify whether they will recom
 
 ## **Abstract**
 
-Job aggregators are essentially search engines for jobs. Job aggregators gather job postings from job boards and other internet sites and consolidate them into a single searchable interface. 
+Customer feedback is a crucial source of information describing user experience with a company and its service. Just like in product development, efficient use of feedback can help identify and prioritize opportunities for company’s further development.
 
-This readme describes how the code for our job aggregator prototype was designed and should be engaged.
+This readme describes how the code for our Text Analysis and Classification Model works.
 
 ## **Obejective** 
 
-Our main goal is to build a job aggregator which will be used by every job applicant who is seeking for a job but mostly aimed at International applicants. We are fetching job data by scraping data from Randstad website, and API's of Adzuna, GitHub jobs, and The Muse and merging it with USCIS 2019 H1B employer data which will provide the data of all companies that offer sponsorship and how many applications were filed which were approved and rejected.
+Our main goal is to gain insights from the custoemr revies . We are fetching job data by scraping data from Randstad website, and API's of Adzuna, GitHub jobs, and The Muse and merging it with USCIS 2019 H1B employer data which will provide the data of all companies that offer sponsorship and how many applications were filed which were approved and rejected.
 
 ## **Process Outline** 
 
