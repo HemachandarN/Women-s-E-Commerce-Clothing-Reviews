@@ -9,59 +9,53 @@ This readme describes how the code for our Text Analysis and Classification Mode
 
 ## **Obejective** 
 
-Our main goal is to gain insights from the custoemr revies . We are fetching job data by scraping data from Randstad website, and API's of Adzuna, GitHub jobs, and The Muse and merging it with USCIS 2019 H1B employer data which will provide the data of all companies that offer sponsorship and how many applications were filed which were approved and rejected.
+In our analysis, we will utilize the power of text mining to do an in-depth analysis of customer reviews on an e-commerce clothing site data and build a classification model to predict whether the customer will recommend the product or not.
 
-## **Process Outline** 
+It will help retailers to have an understanding about their products, mistakes and customer satisfaction.
+
+
+## **Methodology** 
 
 <img src = "https://github.com/pinkesh-nayak/job_aggregator/blob/master/data/process.PNG">
 
-## **Data Source and Access Rights**<br>
-### **Randstad: Web Scraping**<br>
-Link: https://www.randstad.com/jobs/united-states/q-data-science/<br>
-1. Check robot.txt of Randstad | It allows scraping with crawl delay of 5 seconds. <br>
-
-### **Adzuna API**<br>
-Link: https://developer.adzuna.com/overview <br>
-We need to create a developer account to get an app_key and aap_id to access the API.<br>
-Quering the API : https://api.adzuna.com/v1/api/jobs/us/search/1?app_id={YOUR_APP_ID}&app_key={YOUR_APP_KEY}<br>
-**Important Terms and Conditions** <br>
-1. There are no rate limits present.<br>
-Detailed verion of the terms and conditions : https://www.adzuna.co.uk/terms-and-conditions.html<br>
-
-### **GitHub Jobs API**<br>
-Link: https://jobs.github.com/api<br>
-GitHub's API doesn't require an "access token". <br>
-Quering the API: https://jobs.github.com/positions.json?description=data+science&location=US <br>
-**Important Terms and Conditions** <br>
-Detailed version of the API terms: https://help.github.com/en/github/site-policy/github-terms-of-service#h-api-terms <br>
-
-### **The Muse API**<br>
-Link: https://www.themuse.com/developers/api/v2<br>
-Quering the API: https://www.themuse.com/api/public/jobs?category=Data%20Science&location=United%20States&page=1 <br>
-**Important Terms and Conditions** <br>
-1. If we don't register our app, we are limited to 500 requests per hour. We have created developer account and recieved an app_key which will allow us to make up to 3600 requests per hour.<br>
-Detailed version of the API terms: https://www.themuse.com/developers/api/v2/terms
-
-### **United States Citizenship and Immigration Services (USCIS) H1B data**<br>
-Link: https://www.uscis.gov/tools/reports-studies/h-1b-employer-data-hub-files<br>
-Data is openly available on the above site.
+## **Data Source**<br>
+### **Kaggle**<br>
+Link: https://www.kaggle.com/nicapotato/womens-ecommerce-clothing-reviews<br>
 
 ## **Libraries Used**
-import urllib.request<br>
-import robotexclusionrulesparser<br>
-from bs4 import BeautifulSoup<br>
-import requests<br>
-import time<br>
-import random<br>
-import re<br>
-from collections import defaultdict<br>
-from pprint import pprint<br>
-import csv<br>
-import dateutil.parser as dateparser<br>
-import os<br>
-import datetime<br>
 import pandas as pd<br>
-from dateutil import tz<br>
+import numpy as np<br>
+from scipy import stats<br>
+import string<br>
+import seaborn as sns<br>
+import matplotlib.pyplot as plt<br>
+import matplotlib.gridspec as gridspec<br>
+from sklearn.model_selection import train_test_split as split<br>
+from sklearn import metrics<br> 
+from sklearn.metrics import classification_report, confusion_matrix, auc, roc_curve<br>
+import nltk<br>
+from nltk.corpus import stopwords<br>
+from nltk.tokenize import sent_tokenize, word_tokenize, RegexpTokenizer <br>
+from nltk.stem import PorterStemmer, LancasterStemmer<br>
+from sklearn.feature_extraction.text import CountVectorizer<br>
+from sklearn.feature_extraction.text import TfidfTransformer<br>
+from nltk.tokenize import word_tokenize<br>
+from nltk.probability import FreqDist<br>
+import spacy<br>
+import re<br>
+from wordcloud import WordCloud<br>
+from imblearn.over_sampling import SMOTE<br>
+from nltk.stem.snowball import SnowballStemmer<br>
+from nltk.sentiment.vader import SentimentIntensityAnalyzer<br>
+from sklearn.tree import DecisionTreeClassifier<br>
+from sklearn.linear_model import LogisticRegression<br>
+from sklearn.naive_bayes import GaussianNB<br>
+from sklearn import svm<br>
+from sklearn.metrics import f1_score, precision_score, recall_score, accuracy_score<br>
+import warnings<br>
+warnings.filterwarnings('ignore') <br>
+from IPython.display import Image<br>
+%matplotlib inline<br>
 
 ## **Data Acquistion and Preprocessing** 
 
