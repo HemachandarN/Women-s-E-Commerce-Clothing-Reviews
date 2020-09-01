@@ -86,9 +86,9 @@ This involes a lot of steps. Analyzing the data that has not been carefully scre
 
 ### **Text Preprocessing**
 
-Text Preprocessing comes under data preprocessing. This is step mainly deals with text data. Here we clean
+Text Preprocessing comes under data preprocessing. This is step mainly deals with text data. Here we clean the text data so that it will be easier to do analysis on them. The steps involved in this cleaning process are removal of stopwords, removal of punctuations, converting the words to lowercase and lemmatization. After the cleaning process the review is turned into individual words/tokens from which we can find out frequent words used by the poeople who give good ratings and vice versa.  
 
-### **The Muse API**
+### **Sentiment Analysis**
 
 1. fetchDataFromMuse() | Checking for all the number of pages present and fetching all job listings from each page.<br>
 
