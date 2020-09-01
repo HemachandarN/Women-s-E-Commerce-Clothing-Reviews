@@ -16,7 +16,7 @@ It will help retailers to have an understanding about their products, mistakes a
 
 ## **Methodology** 
 
-<img src = "https://github.com/pinkesh-nayak/job_aggregator/blob/master/data/process.PNG">
+<img src = "https://github.com/HemachandarN/Women-s-E-Commerce-Clothing-Reviews/blob/master/Data/Process_Outline.PNG">
 
 ## **Data Source**<br>
 ### **Kaggle**<br>
