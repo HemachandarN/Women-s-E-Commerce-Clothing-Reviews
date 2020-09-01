@@ -101,18 +101,21 @@ Based on the detailed analysis on the customer review text data and other numeri
 
 ## **Who might be interested in this data**
 
-1. Job seekers, majorly international applicants. 
-2. Job Board Applications.
-3. Educational institutes.
-4. Data scientists who want to perform further analysis.  
-5. Consultancies. 
-6. Goverment agencies to generate various employement related surveys. 
+Customer reviews are a great source of “Voice of customer” and could offer tremendous insights into what customers like and dislike about a product or service. For the e-commerce business, customer reviews are very critical, since existing reviews heavily influence buying decision of new customers in the absence of the actual look and feel of the product to be purchased.
+
+Online retailers might be interested on this analysis. It will serve them as a basis towards a bigger picture of **customer retention** as well. 
 
 ## **Challenges Faced**
-1. Since different source different job features, some source which are present in one data source may not be availaable in the other one. <br> 
-2. Company name present in jobs data may not match with USCIS Employer name since it may have been registered with a different name. We are using 'contains()' function. <br>
-The quality of the data can be improved by web scrapping from multiple sources of websites. But most of the sites don’t allow scrapping. We need to get permission. <br> 
-3. Many APIs have rate limit which limits the data we can access from that site.<br> 
 
+1. The main challenge was the text preprocessing to get clean text data out. 
+2. Feature selection; Feature selection here was mainly done by correlation. Doing feature selection using supervised learning algorithms would have got us better model metrics. 
+3. Repetition of products; The 23,000 customer reviews were mainly focussed towards 1206 products. 
+4. Title column; We tried to use it for our analysis, but we were not able to use it in the end. 
+
+## **Limitations**
+
+The analysis mainly focuses on the reviews and ratings given by a customer and how it plays a role in their recommendation for that product. But there can be other reasons involved in the recommendation like sale details of the product like price, delivery date, quality( they would have got something different from what they saw online). The lack of information on the impact of brand loyalty and brand likeliness affected by competition from other retailers as we do not have data about them as well.
+
+The analysis could be improved if the products are segregated by sellers and particular products. Because this is real commercial data, it has been anonymized, and references to the company in the review text and body have been replaced with “retailer”. Including the price column will also be very helpful as mentioned. 
 
 
