@@ -90,21 +90,13 @@ Text Preprocessing comes under data preprocessing. This is step mainly deals wit
 
 ### **Sentiment Analysis**
 
-1. fetchDataFromMuse() | Checking for all the number of pages present and fetching all job listings from each page.<br>
+Sentiment Analysis is used to systematically identify, extract, quantify, and study affective states and subjective information. This analysis basically gives out the emotion behind the customer review in the form of a polarity score. Polarity is nothing but a float that lies between -1 to 1. This tells us whether the review is positive, negative or neutral. We classify each of the reviews using this the polarity score into these three categories. 
 
-### **United States Citizenship and Immigration Services (USCIS) H1B data** 
+### **Classification Models** 
 
-1. fetchDataFromUSCIS() | We are fetching 2019 H-1B Employer Data which is openly available on USCIS Website.<br>
+Based on the detailed analysis on the customer review text data and other numerical, binary and catergorical data we build our classification models. The target variable here as mentioned above is whether the customer will recommend the product or not. 
 
-### **Merging Job data and USCIS data**
 
-1. mergeWithUSCISData(company) | Merges jobs data with USCIS data to get the H1B statistics for each company in jobs data. <br>
-
-### **Exporting the final results to a CSV file**
-
-### **Accessing Final Job data**
-
-1. searchForJobs(title, location, job_posted) | Function for the User to query for jobs. <br>
 
 
 ## **Who might be interested in this data**
