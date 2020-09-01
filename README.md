@@ -94,9 +94,7 @@ Sentiment Analysis is used to systematically identify, extract, quantify, and st
 
 ### **Classification Models** 
 
-Based on the detailed analysis on the customer review text data and other numerical, binary and catergorical data we build our classification models. The target variable here as mentioned above is whether the customer will recommend the product or not. 
-
-
+Based on the detailed analysis on the customer review text data and other numerical, binary and catergorical data we build our classification models. The target variable here as mentioned above is whether the customer will recommend the product or not. We have used 4 models Decision Tree, Logitic Regression, Support Vector Machine and Naive Bayes. The metrics for the Logistics regression model were the best.  
 
 
 ## **Who might be interested in this data**
