@@ -57,6 +57,23 @@ warnings.filterwarnings('ignore') <br>
 from IPython.display import Image<br>
 %matplotlib inline<br>
 
+## Column information 
+
+We have a review dataset of 23486 rows and 10 columns of data. The feature variables are:  
+
+Columns | Definition |
+ --- | --- |
+ Clothing ID  							                   |Integer Categorical variable that refers to the specific piece being reviewed
+ Age 					           |Positive Integer variable of the reviewers age
+ Title 		        |String variable for the title of the review
+ Review Text  					               	   	|String variable for the review body
+ Rating							                	      |String variable for the review body 
+ Recommended IND  					                	|Binary variable stating where the customer recommends the product where 1 is recommended, 0 is not recommended 
+ Positive Feedback Count 								                     |Positive Integer documenting the number of other customers who found this review positive
+ Division Name 					           |Categorical name of the product high level division
+ Department Name 			       |Categorical name of the product department name
+ Class Name 							                  |Categorical name of the product class name
+ 
 ## **Data Acquistion and Preprocessing** 
 
 ### **Randstand: Web Scraping**
