@@ -74,22 +74,19 @@ Columns | Definition |
  Department Name 			       |Categorical name of the product department name
  Class Name 							                  |Categorical name of the product class name
  
-## **Data Acquistion and Preprocessing** 
+## **Data Analysis and Interpretation** 
 
-### **Randstand: Web Scraping**
+### **Exploratory Data Analysis**
 
-1. scrapeDataFromPage(page, writer) | Function to fetch required data from a page for a particular job.<br>
-2. fetchDataFromRandstad() | Function to get link of every jobs present on https://www.randstad.com/jobs/united-states/q-data-science/ calling above function scrapeDataFromPage() <br> 
-3. fetchDataFromRandstadRSS() | To perform scraping once hourly from the RSS feeds<br>
+In this starting stage we analyze each of the features in the dataset. Mainly the relevant ones; continuous columns Age and Positive Feedback; Binary Column Recommendations IND and Categorical Columns Rating, Department Name, Class Name and Division Name. Here we generally use summary statistics and visualizations to gain insights on the features and generate our hypothese for the dataset. Then we do Bivariate analysis where we do the same thing as above with two variables to check whether they have any emprical relationship between them. 
 
-### **Adzuna API** 
+### **Data Preprocessing** 
 
-1. fetchDataFromAdzuna() | Checking for all the number of pages present in API and fetching all job listings from each page. <br>
-2. fetchDataFromAdzuna(1) | It will fetch all data from previous day till today from the API.<br>
+This involes a lot of steps. Analyzing the data that has not been carefully screened will lead to bad results. We need to prepare the data for the analysis and data preprocessing is the way. This process involves Handling missing values, Removing outliers which are not useful and may skew the data, removing redundant features which are not useful for our analysis, encoding categorical variables, balancing the dataset and finally feature selection. 
 
-### **GitHub API**
+### **Text Preprocessing**
 
-1. fetchDataFromGithub() | Checking for all the number of pages present and fetching all job listings from each page.<br>
+Text Preprocessing comes under data preprocessing. This is step mainly deals with text data. Here we clean
 
 ### **The Muse API**
 
@@ -109,46 +106,6 @@ Columns | Definition |
 
 1. searchForJobs(title, location, job_posted) | Function for the User to query for jobs. <br>
 
-
-## File Sizes
-Dated on : 06/14/2019
-
- File Name | Size |
- --- | --- |
- randstad.csv 							                   | 0.99 MB
- adzuna.csv 					           | 11.4 MB
- github.csv 		        | 256 KB
- muse.csv 					               	   	| 124 KB
- uscis.csv 					               	   	| 3.63 MB
- job_database.csv 					               	   	| 13 MB
-
-
-## Column information of the final merge file
-Columns | Definition |
- --- | --- |
- company  							                   |Name of the company
- title 					           |Job Title
- location 		        |Location of the posting
- link  					               	   	|Link to apply
- job_posted							                	      |Date posted 
- description  					                	|Job description 
- catergory 								                     |Job Category
- source 					           |Source from whether the job was fetched
- initial_approvals_2019 			       |H-1B petitions with “New employment” or “New concurrent employment” whose first decision is an approval.
- initial_denial_2019 							                  |H-1B petitions with “New employment” or “New concurrent employment” whose first decision is an denial.
- continuing_approvals_2019							                      	|H-1B petitions with anything other than “New employment” or “New concurrent employment” whose first decision is approval.
- continuing_denials_2019					                	|H-1B petitions with anything other than “New employment” or “New concurrent employment” whose first decision is denial.
-
-## **How to Access the above final_job data file** <br>
-searchForJobs(title, location, job_posted) | Function for the User to query for jobs.Filters availabe: title: Job title, location: Job location, and job_posted: Date of job posting will return all the records from that date to current date.<br>
-
-## **Data Directories** <br>
-1. './data/ranstad/randstad.csv' | Randstad Job's Data
-2. './data/adzuna/adzuna.csv' | Adzuna Job's Data
-3. './data/github/github.csv' | Github Job's Data
-4. './data/muse/muse.csv' | The Muse Job's Data
-5. './data/uscis/uscis.csv' | USCIS HIB Data
-6. './data/job_database/job_database.csv' | Final Job Data
 
 ## **Who might be interested in this data**
 
