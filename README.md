@@ -78,15 +78,15 @@ Columns | Definition |
 
 ### **Exploratory Data Analysis**
 
-In this starting stage we analyze each of the features in the dataset. Mainly the relevant ones; continuous columns Age and Positive Feedback; Binary Column Recommendations IND and Categorical Columns Rating, Department Name, Class Name and Division Name. Here we generally use summary statistics and visualizations to gain insights on the features and generate our hypothese for the dataset. Then we do Bivariate analysis where we do the same thing as above with two variables to check whether they have any emprical relationship between them. 
+In this starting stage we analyze each of the features in the dataset. Mainly the relevant ones; continuous columns Age and Positive Feedback; Binary Column Recommendations IND and Categorical Columns Rating, Department Name, Class Name and Division Name. Here we generally use summary statistics and visualizations to gain insights on the features and generate our hypotheses for the dataset. Then we do Bivariate analysis where we do the same thing as above with two variables to check whether they have any empirical relationship between them. 
 
 ### **Data Preprocessing** 
 
-This involes a lot of steps. Analyzing the data that has not been carefully screened will lead to bad results. We need to prepare the data for the analysis and data preprocessing is the way. This process involves Handling missing values, Removing outliers which are not useful and may skew the data, removing redundant features which are not useful for our analysis, encoding categorical variables, balancing the dataset and finally feature selection. 
+This involves a lot of steps. Analyzing the data that has not been carefully screened will lead to bad results. We need to prepare the data for the analysis and data preprocessing is the way. This process involves handling missing values, Removing outliers that are not useful and may skew the data, removing redundant features that are not useful for our analysis, encoding categorical variables, balancing the dataset and finally feature selection. 
 
 ### **Text Preprocessing**
 
-Text Preprocessing comes under data preprocessing. This is step mainly deals with text data. Here we clean the text data so that it will be easier to do analysis on them. The steps involved in this cleaning process are removal of stopwords, removal of punctuations, converting the words to lowercase and lemmatization. After the cleaning process the review is turned into individual words/tokens from which we can find out frequent words used by the poeople who give good ratings and vice versa.  
+Text Preprocessing comes under data preprocessing. This is step mainly deals with text data. Here we clean the text data so that it will be easier to do analysis on them. The steps involved in this cleaning process are removal of stopwords, removal of punctuations, converting the words to lowercase and lemmatization. After the cleaning process the review is turned into individual words/tokens from which we can find out frequent words used by the people who give good ratings and vice versa.  
 
 ### **Sentiment Analysis**
 
@@ -94,12 +94,12 @@ Sentiment Analysis is used to systematically identify, extract, quantify, and st
 
 ### **Classification Models** 
 
-Based on the detailed analysis on the customer review text data and other numerical, binary and catergorical data we build our classification models. The target variable here as mentioned above is whether the customer will recommend the product or not. We have used 4 models Decision Tree, Logitic Regression, Support Vector Machine and Naive Bayes. The metrics for the Logistics regression model were the best.  
+Based on the detailed analysis on the customer review text data and other numerical, binary and categorical data we build our classification models. The target variable here as mentioned above is whether the customer will recommend the product or not. We have used 4 models Decision Tree, Logistic Regression, Support Vector Machine and Naive Bayes. The metrics for the Logistics regression model were the best.  
 
 
 ## **Who might be interested in this data**
 
-Customer reviews are a great source of “Voice of customer” and could offer tremendous insights into what customers like and dislike about a product or service. For the e-commerce business, customer reviews are very critical, since existing reviews heavily influence buying decision of new customers in the absence of the actual look and feel of the product to be purchased.
+Customer reviews are a great source of “Voice of the customer” and could offer tremendous insights into what customers like and dislike about a product or service. For the e-commerce business, customer reviews are very critical, since existing reviews heavily influence buying decision of new customers in the absence of the actual look and feel of the product to be purchased.
 
 Online retailers might be interested on this analysis. It will serve them as a basis towards a bigger picture of **customer retention** as well. 
 
